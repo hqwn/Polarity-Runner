@@ -1,6 +1,6 @@
-# Making your very own one key game
+# Making your very own one-key game
 
-Hi, my name is Aryan. I'm 14 years old and I will be teaching you how to make this game using p5.js, click on the image to see a video preview 👇
+Hi, my name is Aryan. I'm 14 years old, and I will be teaching you how to make this game using p5.js. Click on the image to see a video preview 👇
 
 [![game preview](https://cdn.hackclub.com/019f0750-9693-7e08-a555-3d2dea4f909d/Screenshot%202026-06-26%20222203.png)](https://cdn.hackclub.com/019f074e-7cc8-7090-8b84-ec99d8436944/game_preview.mp4)
 
@@ -8,18 +8,18 @@ If you've never made a game before, or even coded, that's fine! If you're worrie
 
 Before we start, here are some helpful tips:
 
-- If you ever get stuck, or get a nasty error, use Google or ChatGPT, they are your best friend when it comes to coding.
+- If you ever get stuck or get a nasty error, use Google or ChatGPT; they are your best friend when it comes to coding.
 
-- You can always message me on Slack if you need help, my username is aryanjain9818.
+- You can always message me on Slack if you need help; my username is aryanjain9818.
 
 - Have fun and add features!
 
-- CHANGE NUMBERS AND CODE! See what happens if you remove/change something, this is the best way to learn, and understand what everything does.
+- CHANGE NUMBERS AND CODE! See what happens if you remove/change something; this is the best way to learn and understand what everything does.
 
 
 ## Getting Started/ Making the Canvas
 
-Let's get started! First navigate to the [p5.js](https://editor.p5js.org/) coding editor (click on the link), and click on "Start coding" to start a new project. You should see some code like this:
+Let's get started! First, navigate to the [p5.js](https://editor.p5js.org/) coding editor (click on the link), and click on "Start coding" to start a new project. You should see some code like this:
 
 > Make an account so you don't lose your progress!
 
@@ -34,9 +34,9 @@ function draw() {
 
 ```
 
-This is a lot so let's break it down. The setup function just defines our canvas, or how big the game will be, go set it to ```createCanvas(600, 400);``` and click run. This will now show a bigger rectangle screen for us to play on! The draw function is where our main game logic and everything goes, start by doing this for your draw function:
+This is a lot, so let's break it down. The setup function just defines our canvas, or how big the game will be, go set it to ```createCanvas(600, 400);``` and click run. This will now show a bigger rectangle screen for us to play on! The draw function is where our main game logic and everything goes. Start by doing this for your draw function:
 
-> You can toggle the run button to see what your code does, and click on the stop button to stop it from running. You can also toggle the auto-refresh button so it'll automatically run change and run after you make changes to your code.
+> You can toggle the run button to see what your code does, and click on the stop button to stop it from running. You can also toggle the auto-refresh button so it'll automatically run and change after you make changes to your code.
 
 ```
 function draw() {
@@ -56,11 +56,11 @@ function draw() {
 
 ```
 
-This may seem confusing, but what it basically is saying is that if the screen is set to run, we display our main game logic, if screen is game_over then we display our end screen, and if screen is start, we display our start screen, we will code all these screens, so don't worry and just follow along! (screen is a variable, which we will define later, if you don't know what a variable is, it's a little word where we store information, don't worry it'll make sense later)
+This may seem confusing, but what it basically is saying is that if the screen is set to run, we display our main game logic; if screen is game_over, then we display our end screen, and if screen is start, we display our start screen. We will code all these screens, so don't worry and just follow along! (screen is a variable, which we will define later; if you don't know what a variable is, it's a little word where we store information; don't worry, it'll make sense later)
 
 ## Making the Start Screen
 
-Now we have our main draw function, let's start by making our start screen, which is the first screen that shows up when you run the game. We will make this a function called start_screen, that's why there are parentheses after it, a function is just a group of code we can run whenever we want, it helps our code stay more organized and easier to read. So let's make our start screen function, and add some text to it:
+Now we have our main draw function; let's start by making our start screen, which is the first screen that shows up when you run the game. We will make this a function called start_screen; that's why there are parentheses after it. A function is just a group of code we can run whenever we want; it helps our code stay more organized and easier to read. So let's make our start screen function and add some text to it:
 
 ```
 function start_screen(){
@@ -84,9 +84,9 @@ function start_screen(){
 
 ```
 
-What each line of code does, is listed above by the code, also anything you write after // in a line of code is just a comment, meaning whatever you write, the code won't see it, it's just there to help you understand the code better.
+What each line of code does is listed above by the code. Also, anything you write after // in a line of code is just a comment, meaning whatever you write, the code won't see it; it's just there to help you understand the code better.
 
-Now we are almost ready to test out our start screen, but first we never made the screen variable, so let's do that! At the top of your code write ```let screen = 'start';``` all this is saying is, "hey make a variable called screen and this is what it is set to/means; aka: start" now when our code is running in draw, it will see hey! the screen is set to start so let's run this function, which displays our start screen! Now click run and you should see your start screen! This is what your final code should look like right now:
+Now we are almost ready to test out our start screen, but first we never made the screen variable, so let's do that! At the top of your code, write ```let screen = 'start';```. All this is saying is, "hey, make a variable called screen and this is what it is set to/means; aka: start." Now, when our code is running in draw, it will see Hey! The screen is set to start, so let's run this function, which displays our start screen! Now click run, and you should see your start screen! This is what your final code should look like right now:
 
 ```
 function setup() {
@@ -125,7 +125,7 @@ function start_screen(){
 
 # Keypress detection
 
-Now our start screen is done! Let's make it actually work, so when we press f, it goes to the next screen! Then we can start making our actual game! Unlike other functions, we will have to call using the function name() in draw, we will make a special function called keyPressed, this function automatically runs and detects if a key is pressed. Add this code to your code:
+Now our start screen is done! Let's make it actually work, so when we press F, it goes to the next screen! Then we can start making our actual game! Unlike other functions, we will have to call this function using the function name() in draw. We will make a special function called keyPressed; this function automatically runs and detects if a key is pressed. Add this code to your code:
 
 ```
 function keyPressed() {
@@ -139,7 +139,7 @@ function keyPressed() {
 }
 ```
 
-This code says, if the player presses f, and the screen is set to start, then change the screen to run. Now we have our start screen working, let's make our run screen! I kind of lied on this part, the function I told you to add to your code is not complete, so remove the start_screen() function from your draw function, and replace it with init(), I will explain what we are going to do with this function later, but for now, this is what your draw function should look like:
+This code says, if the player presses F and the screen is set to start, then change the screen to run. Now we have our start screen working; let's make our run screen! I kind of lied on this part: the function I told you to add to your code is not complete, so remove the start_screen() function from your draw function, and replace it with init(). I will explain what we are going to do with this function later, but for now, this is what your draw function should look like:
 
 ```
 
@@ -165,7 +165,7 @@ function draw() {
 
 # Setting up our Variables
 
-We will now make our init function, this function is going to make all of our sprites for our game, like our player, our spikes, and our ceiling. Before that, let's add all of our variables we will need for our game, some of these, we won't quite use yet, but will later, so don't worry about what they mean/do. I'll explain that later. Just add these variables to your code at the top, by the screen variable:
+We will now make our init function. This function is going to make all of our sprites for our game, like our player, our spikes, and our ceiling. Before that, let's add all of our variables we will need for our game. Some of these, we won't quite use yet, but will later, so don't worry about what they mean/do. I'll explain that later. Just add these variables to your code at the top, by the screen variable:
 
 ``` 
 let move = 1;
@@ -283,7 +283,7 @@ function init() {
 
 # Modifying the key pressed function
 
-Now we are almost done, we made everything, including our spike (the triangle), our player (the square), and our ceiling and floor. Now make our keyPressed function flip our player! This is what your keyPressed function should look like:
+Now we are almost done; we made everything, including our spike (the triangle), our player (the square), and our ceiling and floor. Now make our keyPressed function flip our player! This is what your keyPressed function should look like:
 
 ```
 
@@ -309,7 +309,7 @@ function keyPressed() {
 
 # Making the variables_init() function
 
-Now we are 90% done, we just have 3 things to add! Let's start by making our variables_init function, this function will reset all our variables to their original state, so when we start a new game, it starts from scratch. Add this code to your code:
+Now we are 90% done; we just have 3 things to add! Let's start by making our variables_init function. This function will reset all our variables to their original state, so when we start a new game, it starts from scratch. Add this code to your code:
 
 ```
 
@@ -381,7 +381,7 @@ function end_screen(){
 
 # Finishing touches
 
-Now last piece of code! But before we add it just add our new collide function to our draw function, and after that we will add the last piece of code as shown below, I'll explain it through comments, so your draw function should look like this:
+Now, the last piece of code! But before we add it, just add our new collide function to our draw function, and after that we will add the last piece of code as shown below. I'll explain it through comments, so your draw function should look like this:
 
 ``` 
 function draw() {
@@ -591,4 +591,4 @@ function variables_init(){
 ```
 ---
 
-Now you finished making your own one key game! thank you for following along, I know I'm not the best at explaining things, but I hope you learned something new and had fun! 
+Now you've finished making your own one-key game! Thank you for following along. I know I'm not the best at explaining things, but I hope you learned something new and had fun! 
